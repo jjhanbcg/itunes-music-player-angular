@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router, UrlCreationOptions, UrlSerializer } from '@angular/router';
-import { map, Observable, switchMap } from 'rxjs';
+import { filter, map, Observable, switchMap } from 'rxjs';
 import {
   ItunesArtist,
   ItunesArtistResponse,
@@ -28,6 +28,7 @@ export class ApiService {
     return this.searchArtists(term).pipe(
       // Extracting artistIds from a list of artists match the search term
       map((artists) => artists.map((artist) => artist.artistId)),
+      filter((artists) => artists.length > 0),
       // Lookup artists' tracks by artistIds
       switchMap((artistIds) => this.lookupArtistTracks(artistIds))
     );
@@ -99,7 +100,7 @@ export class ApiService {
   // By default, limit the results to get the latest 5 tracks from each artist
   private getTracksQueryStr(ids: number[], limit = 5): string {
     // Limit results for optimising performance, at least one track from each artist
-    limit = Math.ceil(50 / ids.length);
+    limit = ids.length > 0 ? Math.ceil(50 / ids.length) : 5;
     return this.getQueryStr(['/lookup'], {
       queryParams: {
         id: ids.join(','),
