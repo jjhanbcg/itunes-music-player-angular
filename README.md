@@ -14,7 +14,10 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Tested browser
 
-Chrome Version 104.0.5112.79 (Official Build) (x86_64)
+Please test this on Desktop, Chrome Version 104.0.5112.79 (Official Build) (x86_64)
+
+- On Mobile Safari, the iTunes Affiliate API failed with JSONP Error. However on Desktop Safari, same API call works.
+- On Mobile Safari, play audio causes error "Unhandled Promise Rejection: NotAllowedError: The request is not allowed by the user agent or the platform in the current context, possibly because the user denied permission."
 
 ## Supported features
 
