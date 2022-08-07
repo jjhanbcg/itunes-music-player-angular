@@ -1,0 +1,12 @@
+<div class="search" [class.searching]="requesting === 'tracks'">
+  <input
+    class="search__input"
+    type="text"
+    [formControl]="control"
+    placeholder="Search Artist..."
+  />
+  <span class="search__icon">
+    <span class="material-icons search"> search </span>
+    <span class="material-icons sync"> sync </span>
+  </span>
+</div>

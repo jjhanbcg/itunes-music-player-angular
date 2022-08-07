@@ -1,0 +1,15 @@
+<div class="controls">
+  <button
+    type="button"
+    class="circle"
+    [class.paused]="!playing"
+    (click)="onToggle()"
+  >
+    <span class="circle__btn">
+      <span class="material-icons play"> play_arrow </span>
+      <span class="material-icons pause"> pause </span>
+    </span>
+    <span class="circle__back-1"></span>
+    <span class="circle__back-2"></span>
+  </button>
+</div>

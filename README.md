@@ -1,27 +1,25 @@
-# ItunesMusicPlayerAngular
+# Itunes Music Player Angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.1.
 
 ## Development server
 
+Run `npm install` to install the required npm packages for this project.
+
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Tested browser
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Chrome Version 104.0.5112.79 (Official Build) (x86_64)
 
-## Running end-to-end tests
+## Supported features
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- All the below actions are recorded in browser history, so application state is retained on refresh and can be replayed backwards or forwards
+- Search tracks by artist's name
+- Select track on mobile(<= 768px) to auto-play track and popup bottom controls
+- Select track on desktop(> 768px) to view the collection and display it in splitted detail view
+- Play/Pause track by clicking the control

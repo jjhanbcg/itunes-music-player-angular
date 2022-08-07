@@ -1,0 +1,28 @@
+<ul class="list" *ngIf="tracks?.length">
+  <li
+    *ngFor="let track of tracks; trackBy: trackByFn"
+    (click)="onSelectTrack(track)"
+    class="item"
+    [class.selected]="track.trackId === selected"
+    [class.playing]="track.trackId === play && playing"
+  >
+    <span>
+      <img [src]="track.artworkUrl60" />
+    </span>
+    <span class="item-content">
+      <span>
+        <em>{{ track.trackName }}</em>
+      </span>
+      <span>{{ track.artistName }}</span>
+      <span>{{ track.collectionName }}</span>
+    </span>
+
+    <span class="boxContainer" *ngIf="track.trackId === play && playing">
+      <span class="box box1"></span>
+      <span class="box box2"></span>
+      <span class="box box3"></span>
+      <span class="box box4"></span>
+      <span class="box box5"></span>
+    </span>
+  </li>
+</ul>

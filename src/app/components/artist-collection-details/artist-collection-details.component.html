@@ -1,0 +1,14 @@
+<div class="collection" *ngIf="track">
+  <img class="cover" [src]="track.artworkUrl100" />
+
+  <app-music-player-controls-container class="controls">
+  </app-music-player-controls-container>
+
+  <ul class="list" *ngIf="tracks?.length">
+    <li *ngFor="let track of tracks; trackBy: trackByFn">
+      <span>
+        {{ track.trackName }}
+      </span>
+    </li>
+  </ul>
+</div>
