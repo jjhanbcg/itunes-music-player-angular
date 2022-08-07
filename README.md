@@ -23,3 +23,7 @@ Chrome Version 104.0.5112.79 (Official Build) (x86_64)
 - Select track on mobile(<= 768px) to auto-play track and popup bottom controls
 - Select track on desktop(> 768px) to view the collection and display it in splitted detail view
 - Play/Pause track by clicking the control
+
+## Demo
+
+https://jjhanbcg.github.io/itunes-music-player-angular/
